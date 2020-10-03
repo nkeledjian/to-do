@@ -33,7 +33,7 @@ function Task({ task, index, completeTask, removeTask }) {
     >
       {task.title}
       <button style={{ background: "red" }} onClick={() => removeTask(index)}>x</button>
-      <button onClick={() => completeTask(index)}>Complete</button>
+      <button onClick={() => completeTask(index)}>{task.completed ? 'Complete' : 'In Progress...'}</button>
     </div>
   );
 }
